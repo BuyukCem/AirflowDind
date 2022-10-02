@@ -1,0 +1,24 @@
+[2022-10-02 06:15:02,347] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: docker_operator_demo.docker_command_sleep scheduled__2022-10-02T05:05:00+00:00 [queued]>
+[2022-10-02 06:15:02,432] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: docker_operator_demo.docker_command_sleep scheduled__2022-10-02T05:05:00+00:00 [queued]>
+[2022-10-02 06:15:02,436] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-02 06:15:02,438] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-10-02 06:15:02,439] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-02 06:15:02,527] {taskinstance.py:1259} INFO - Executing <Task(DockerOperator): docker_command_sleep> on 2022-10-02 05:05:00+00:00
+[2022-10-02 06:15:02,535] {standard_task_runner.py:52} INFO - Started process 1003 to run task
+[2022-10-02 06:15:02,560] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'docker_operator_demo', 'docker_command_sleep', 'scheduled__2022-10-02T05:05:00+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/sample_dag.py', '--cfg-path', '/tmp/tmpnlj4fysj', '--error-file', '/tmp/tmpn98ugy8w']
+[2022-10-02 06:15:02,569] {standard_task_runner.py:77} INFO - Job 28: Subtask docker_command_sleep
+[2022-10-02 06:15:02,852] {logging_mixin.py:109} INFO - Running <TaskInstance: docker_operator_demo.docker_command_sleep scheduled__2022-10-02T05:05:00+00:00 [running]> on host 336e822c453c
+[2022-10-02 06:15:03,129] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=docker_operator_demo
+AIRFLOW_CTX_TASK_ID=docker_command_sleep
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-02T05:05:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-10-02T05:05:00+00:00
+[2022-10-02 06:15:03,250] {docker.py:258} INFO - Starting docker container from image alpine:latest
+[2022-10-02 06:15:03,315] {docker.py:269} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-10-02 06:15:03,905] {docker.py:320} INFO - hello
+[2022-10-02 06:15:04,142] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=docker_operator_demo, task_id=docker_command_sleep, execution_date=20221002T050500, start_date=20221002T061502, end_date=20221002T061504
+[2022-10-02 06:15:04,286] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-10-02 06:15:04,444] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

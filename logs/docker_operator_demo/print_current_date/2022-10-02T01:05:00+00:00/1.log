@@ -1,0 +1,27 @@
+[2022-10-02 02:21:02,674] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: docker_operator_demo.print_current_date scheduled__2022-10-02T01:05:00+00:00 [queued]>
+[2022-10-02 02:21:02,737] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: docker_operator_demo.print_current_date scheduled__2022-10-02T01:05:00+00:00 [queued]>
+[2022-10-02 02:21:02,740] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-02 02:21:02,742] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-10-02 02:21:02,744] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-02 02:21:02,804] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): print_current_date> on 2022-10-02 01:05:00+00:00
+[2022-10-02 02:21:02,813] {standard_task_runner.py:52} INFO - Started process 820 to run task
+[2022-10-02 02:21:02,834] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'docker_operator_demo', 'print_current_date', 'scheduled__2022-10-02T01:05:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/sample_dag.py', '--cfg-path', '/tmp/tmpy4lvm0db', '--error-file', '/tmp/tmp6d4pv9xx']
+[2022-10-02 02:21:02,836] {standard_task_runner.py:77} INFO - Job 15: Subtask print_current_date
+[2022-10-02 02:21:03,129] {logging_mixin.py:109} INFO - Running <TaskInstance: docker_operator_demo.print_current_date scheduled__2022-10-02T01:05:00+00:00 [running]> on host 336e822c453c
+[2022-10-02 02:21:03,339] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=docker_operator_demo
+AIRFLOW_CTX_TASK_ID=print_current_date
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-02T01:05:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-10-02T01:05:00+00:00
+[2022-10-02 02:21:03,344] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-02 02:21:03,347] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'date']
+[2022-10-02 02:21:03,365] {subprocess.py:85} INFO - Output:
+[2022-10-02 02:21:03,456] {subprocess.py:89} INFO - Sun Oct  2 02:21:03 UTC 2022
+[2022-10-02 02:21:03,460] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-10-02 02:21:03,551] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=docker_operator_demo, task_id=print_current_date, execution_date=20221002T010500, start_date=20221002T022102, end_date=20221002T022103
+[2022-10-02 02:21:03,654] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-10-02 02:21:03,796] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
